@@ -34,3 +34,9 @@ let hideRightSideMenu = () => { // скрывает меню (доабвит к�
 headerMenuButtonOpen.addEventListener("click", showRightSideMenu); // на событе click вызывает функцию "ПОКАЗА"
 rightSideMenuButtonClose.addEventListener("click", hideRightSideMenu); // на событе click вызывает функцию "СКРЫТИЯ"
 
+var mixer = mixitup('.gallery__inner',{
+    load: {
+        filter: '.living'
+    }
+});
+
