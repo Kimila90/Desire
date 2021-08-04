@@ -7,6 +7,13 @@ $(function () {
         autoplay: true
     });
 
+    $('.contacts-slider').slick({
+        slidesToShow: 10,
+        slidesToScroll: 10,
+        dots: true,
+        arrows: false
+    });
+
 
 //     $('.header__btn').on('click', function () {
 //         $('.rightside-menu').removeClass('rightside-menu--close');
@@ -39,4 +46,3 @@ var mixer = mixitup('.gallery__inner',{
         filter: '.living'
     }
 });
-
