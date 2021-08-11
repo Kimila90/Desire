@@ -13,13 +13,19 @@ $(function () {
         dots: true,
         arrows: false
     });
-
+    
     $('.article-slider__box').slick({
         prevArrow: '<button type="button" class="article-slider__arrow article-slider__arrow-left"><img src="./images/blogpost/blogpost/Path.svg" alt="arrow icon"></button>',
         nextArrow: '<button type="button" class="article-slider__arrow article-slider__arrow-right"><img src="./images/blogpost/blogpost/Path-1.svg" alt="arrow icon"></button>'
     });
-
-
+    
+    
+    var mixer = mixitup('.gallery__inner',{
+        load: {
+            filter: '.living'
+        }
+    });
+    
 //     $('.header__btn').on('click', function () {
 //         $('.rightside-menu').removeClass('rightside-menu--close');
 //         console.log("DELETE");
@@ -46,8 +52,24 @@ let hideRightSideMenu = () => { // скрывает меню (доабвит к�
 headerMenuButtonOpen.addEventListener("click", showRightSideMenu); // на событе click вызывает функцию "ПОКАЗА"
 rightSideMenuButtonClose.addEventListener("click", hideRightSideMenu); // на событе click вызывает функцию "СКРЫТИЯ"
 
-var mixer = mixitup('.gallery__inner',{
-    load: {
-        filter: '.living'
-    }
+
+// MOBILE
+// const headerMenuBtnOpen = document.querySelector('.header__btn-menu'); // кнопка на хедере для открытия
+// const MenuButtonClose = document.querySelector('.menu--open'); // кнопка в меню для закрытия
+// const Menu = document.querySelector('.menu'); // само меню
+
+// let showMenu = () => { // показать меню (удалит класс, который его скрывал)
+//     Menu.classList.add('menu--open');
+// };
+
+// let hideMenu = () => { // скрывает меню (доабвит класс который его скроет)
+//     Menu.classList.remove('menu--open');
+// };
+
+// headerMenuBtnOpen.addEventListener("click", showMenu); // на событе click вызывает функцию "ПОКАЗА"
+// MenuButtonClose.addEventListener("click", hideMenu); // на событе click вызывает функцию "СКРЫТИЯ"
+
+
+$('.header__btn-menu').on('click', function () {
+    $('.menu').toggleClass('menu--open');
 });

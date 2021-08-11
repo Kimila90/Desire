@@ -18,6 +18,9 @@
         background-color: transparent;
         border: none;
     }
+    &__btn-menu {
+        display: none;
+    }
 }
 
 .logo {
@@ -59,20 +62,24 @@
 .breadcrumbs {
     background: rgba(#DFDFDF, .5);
     position: relative;
-    z-index: 999;
+    z-index: 10;
     padding: 13px 14px;
     &__list {
         display: flex;
+        overflow-x: auto;
     }
     &__link {
         font-size: 14px;
         font-weight: 400;
         color: $default;
     }
+    &__item {
+        position: relative;
+        padding-right: 8px;
+    }
     &__item::after {
         content: '/';
-        margin-left: -4px;
-        margin-right: 4px;
+        position: absolute;
     }
     &__item:last-child::after {
         display: none;
@@ -1286,3 +1293,4 @@
         background-color: $title;
     }
 }
+@import 'media';
