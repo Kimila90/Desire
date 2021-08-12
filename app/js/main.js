@@ -20,12 +20,15 @@ $(function () {
     });
     
     
-    var mixer = mixitup('.gallery__inner',{
+    mixitup('.gallery__inner',{
         load: {
             filter: '.living'
         }
     });
     
+    if($(window).width() < 651){
+        $('.works-path__item--measuring').appendTo($('.works-path__items-box'));
+    }
 //     $('.header__btn').on('click', function () {
 //         $('.rightside-menu').removeClass('rightside-menu--close');
 //         console.log("DELETE");
@@ -54,22 +57,19 @@ rightSideMenuButtonClose.addEventListener("click", hideRightSideMenu); // на �
 
 
 // MOBILE
-// const headerMenuBtnOpen = document.querySelector('.header__btn-menu'); // кнопка на хедере для открытия
-// const MenuButtonClose = document.querySelector('.menu--open'); // кнопка в меню для закрытия
-// const Menu = document.querySelector('.menu'); // само меню
+const headerMenuBtnOpen = document.querySelector('.header__btn-menu'); // кнопка на хедере для открытия / закрытия
+const menus = document.querySelectorAll('.menu'); // сами менюхи
 
-// let showMenu = () => { // показать меню (удалит класс, который его скрывал)
-//     Menu.classList.add('menu--open');
-// };
+console.log(headerMenuBtnOpen, menus);
 
-// let hideMenu = () => { // скрывает меню (доабвит класс который его скроет)
-//     Menu.classList.remove('menu--open');
-// };
+let showHideMenu = () => { // показать меню (удалит класс, который его скрывал)
+    menus.forEach(menu => menu.classList.toggle("menu--open"));
+};
 
-// headerMenuBtnOpen.addEventListener("click", showMenu); // на событе click вызывает функцию "ПОКАЗА"
-// MenuButtonClose.addEventListener("click", hideMenu); // на событе click вызывает функцию "СКРЫТИЯ"
+headerMenuBtnOpen.addEventListener("click", showHideMenu); // на событе click вызывает функцию "ПОКАЗА" / "СКРЫТИЯ"
 
 
-$('.header__btn-menu').on('click', function () {
-    $('.menu').toggleClass('menu--open');
-});
+// jquery implementation
+// $('.header__btn-menu').on('click', function () {
+//     $('.menu').toggleClass('menu--open');
+// });
