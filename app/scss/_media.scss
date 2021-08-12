@@ -30,7 +30,14 @@
         &__btn {
             margin: 0;
             padding: 6px 10px;
-
+        }
+    }
+    .about {
+        &__text {
+            padding-left: 0;
+        }
+        &__content {
+            padding: 40px 0;
         }
     }
 
@@ -106,6 +113,17 @@
     .decor {
         padding: 70px 0 55px;
     }
+    .inspiration {
+        &__image {
+            display: none;
+        }
+    }
+    .partners {
+        padding-bottom: 0;
+        &__items {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
     .works-path {
         &__item--measuring {
             margin-left: 100px;
@@ -117,6 +135,11 @@
         }
         &__btn {
             margin-bottom: 10px;
+        }
+    }
+    .about {
+        &__prev {
+            padding: 80px 0;
         }
     }
 }
@@ -203,6 +226,21 @@
             }
         }
     }
+    .inspiration {
+        &__item-text,
+        &__num {
+            font-size: 16px;
+        }
+        &__item-text {
+            margin-right: 10px;
+        }
+    }
+    .about {
+        &__prev-title {
+            font-size: 40px;
+            line-height: 48px;
+        }
+    }
     .menu {
         padding-right: 0;
         width: 100%;
@@ -213,6 +251,7 @@
         transform: translateY(-350px);
         transition: all .5s;
         &--open {
+            font-size: 16px;
             transform: translateY(30px);
         }
         &__list {
@@ -259,6 +298,14 @@
     }
 }
 @media (max-width: 375px){
+    .partners {
+        &__items {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    .new-collection {
+        padding-top: 20px;
+    }
     .footer {
         &__inner {
             justify-content: space-between;
