@@ -156,6 +156,9 @@
 .map {
     margin-top: -53px;
     margin-bottom: 50px;
+    iframe {
+        height: 578px;
+    }
 }
 
 .contacts {
@@ -273,12 +276,12 @@
     &__title {
         transition: all .5s;
         position: absolute;
-        left: 0;
-        right: 0;
+        left: -25;
+        right: -5;
         top: 0;
         bottom: 0;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         background-color: rgba(#fff, .6);
         color: $title;
@@ -1166,7 +1169,7 @@
         color: #707070;
     }
     &__date,
-    &__autor,
+    &__author,
     &__theme {
         color: inherit;
     }
